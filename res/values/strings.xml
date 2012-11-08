@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Explore Kenya</string>
+    <string name="appname">Explore Kenya</string>
+    
+    
+    <!-- maps key-->
+    <string name="google_maps_api_key">0A8EMCJX_pL4K1YzpKcm4Es4vP49jV3uAnvLOLA</string>
+                     <!-- Default key  0SEQj06BtcE9oaRzUZikV9v6fXVcdJIaaF9c8ug-->
+    
+    <!-- Description UI-->
+     <string name="description_home">ExploreKenya</string>
+     <string name="description_cities">Locations</string>
+     <string name="description_parks">Parks</string>
+     <string name="description_culture">Culture</string>
+     <string name="description_events">Events</string>
+     <string name="description_info">Info</string>
+     <string name="description_logo">Home</string>
+     <string name="description_search">Search</string>
+     <string name="description_share">Share</string>
+     
+     <!-- Description Manifest-->
+     <string name="comment">Comment</string>
+     <string name="comments">Comments</string>
+     <string name="location_nairobi">Nairobi City</string>
+     <string name="location_mombasa">Mombasa City</string>
+     <string name="location_malindi">Malindi</string>
+     <string name="location_kisumu">Kisumu City</string>
+     <string name="location_nakuru">Nakuru</string>
+     <string name="location_nanyuki">Nanyuki</string>
+     <string name="description_food">Kenyan Cuisine</string>
+     <string name="description_sports">Kenyan Sports</string>
+     <string name="description_lifestyle">Kenyan Lifestyle</string>
+     <string name="description_history">History of Kenya</string>
+    
+    <!-- Network Error on Loading  -->
+      <string name="notification_msg">No Internet Connection.</string>
+      <string name="notification_msg_search">No Search results obtained.</string>
+     <string name="notification_prompt">Explore Kenya.</string>
+     <string name="exit_btn">Exit</string>
+     <string name="ok_btn">OK</string>
+      <string name="empty_field">Search field  Cannot be Blank</string>
+   
+     
+     <!-- Maping stuff -->
+     <string name="enable_gps_network">Enable GPS Settings.</string>
+      <string name="enable_message">Please confirm GPS  settings to resolve current location</string>
+      <string name="settings_btn">Settings</string>
+      <string name="cancel">Cancel</string>
+     
+    <!-- Comment -->
+    <string name="empty_name">Please provide your Name.</string>
+    <string name="empty_comment">Please submit a comment.</string>
+    
+    <!-- TabLayout UI -->
+    <string name="tab_cities">Locations</string>
+    <string name="tab_tourism">Tourism</string>
+    <string name="tab_culture">Culture</string>
+    <string name="tab_events">Events</string>
+    <string name="tab_info">Info</string>
+    
+    <!-- Settings UI-->
+    <string name="chk_auto_fetch">Notification</string>
+    <string name="hint_auto_fetch">Periodic Event Notification</string>
+    <string name="vibrate">Vibrate Alert</string>
+    <string name="hint_vibrate">Will cause phone to vibrate</string>
+    <string name="flash_led">Flashing LED</string>
+	<string name="hint_flash_led">Cause phone\'s LED to flash</string>
+	<string name="setting_title">Explore Kenya Settings.</string>
+	
+	<!-- Locations -->
+	<string name="more">:More</string>
+    <string name="attractions">Attractions</string>
+    <string name="map">Locations Map</string>
+    
+    <string name="crash_toast_text">Internet Connection Lost</string>
+
+    
+    <!-- Content I should really have this on the server -->
+	<string name="nairobi">Nairobi is the capital of Kenya and largest city of Kenya. 
+The name Nairobi  comes from the Maasai phrase Enkare Nairobi, which translates 
+to cold water, the Maasai name of the Nairobi river, which in turn lent its name to the city. 
+However,it is popularly known as the "Green City in the Sun" and is surrounded by several expanding 
+villa suburbs. Residents of Nairobi are known as Nairobians\n</string>
+<string name="nairobi1">
+The city is located at 1°17′S 36°49′E and occupies 696 square kilometres (270 sq mi).
+Nairobi is situated between the cities of Kampala and Mombasa.
+The Ngong Hills, located to the west of the city, are the most prominent geographical 
+feature of the Nairobi area. Mount Kenya is situated north of Nairobi and Mount Kilimanjaro is
+towards the south-east. Both mountains are visible from Nairobi on a clear day.
+The Nairobi River and its tributaries traverse through the Nairobi County. 
+The late Nobel Peace Prize laureate Wangari Maathai has fought fiercely to save the indigenous 
+Karura Forest in northern Nairobi which was under threat of being replaced by 
+housing and other infrastructure.</string>
+
+<string name="mombasa">Mombasa is the second-largest city in Kenya. 
+Lying next to the Indian Ocean, it has a major port and an international airport. 
+The city also serves as the centre of the coastal tourism industry.
+The city has a population of 939,370, as per the 2009 census,
+and is located on Mombasa Island, which is separated 
+from the mainland by two creeks: Tudor Creek and Kilindini Harbour. 
+The island is connected to the mainland to the north by the Nyali Bridge, 
+to the south by the Likoni Ferry and to the west by the Makupa Causeway, 
+alongside which runs the Kenya-Uganda Railway. The port serves both Kenya 
+and countries of the interior, linking them to the Ocean. 
+The city is served by Moi International Airport located in
+the northwest mainland suburb of Chaani, northwest of Changamwe area.\n</string>
+ <string name="mombasa2">The Nothern Shoreline of Mombasa is renowned for its vibrant 24-hour
+ entertainment offers, including both family entertainment 
+(water parks, cinemas, bowling, etc.), sports (watersports, 
+mountain biking and gokarting), culinary offers (restaurants offering a 
+wide range of specialties 
+from Kenya, China, Japan, India, Italy, Germany and other countries) 
+and night life(bars, pubs, clubs, discothèques, etc.).
+Moi International Airport serves the city of Mombasa. 
+It is located in Port Reitz area, also known locally as Chaani 
+area on the mainland metropolitan area. 
+Flights to Nairobi and other Kenyan, European 
+and Middle Eastern destinations depart from the 
+airport. Besides Mombasa and Nairobi are 
+well connected by chartered flights operated via Wilson airport. </string>
+<string name="malindi">Malindi is a town on Malindi Bay at the mouth of the Galana River, 
+lying on the Indian Ocean coast of Kenya. 
+It is 120 kilometres northeast of Mombasa. 
+It is the capital of the Malindi District.
+Tourism is the major industry in Malindi. 
+The city is exceptionally popular among Italian tourists. 
+Malindi is served with a domestic airport and a highway between Mombasa and Lamu.
+ The nearby Watamu resort and Gedi Ruins (also known as Gede) are 
+south of Malindi. The mouth of the Sabaki River lies in northern Malindi. 
+The Watamu and Malindi Marine National Parks form a continuous protected 
+coastal area south of Malindi. The area shows classic examples of Swahili 
+architecture.
+Malindi is home to the Malindi Airport and Broglio Space Centre.\n </string>
+<string name="malindi1">Malindi has been a Swahili settlement since the 14th century. 
+Once rivaled only by Mombasa for dominance in this part of East Africa, Malindi has traditionally been a 
+port city for foreign powers. In 1414, the town was visited by the fleet of the Chinese explorer Zheng He.
+ Malindi\'s ruler sent a personal envoy with a giraffe as a present to China on that fleet.
+The Portuguese explorer Vasco da Gama met Malindi authorities in 1498 to sign a trade agreement and 
+hire a guide for the voyage to India, when he erected a coral pillar. The pillar stands to this day.
+It is a fairly popular tourist attraction for both local and international tourists.
+ In 1499 the Portuguese established a trading post in Malindi that served as a resting stop
+on the way to and from India. A church dates from this era.
+Many traditional buildings survive, including the Juma Mosque 
+and palace on the beach, a stretch popular with tourists.\n</string>
+<string name="kisumu">Kisumu is a port city in western Kenya at 1,131 m (3,711 ft).
+ It is the third largest 
+city in Kenya, the principal city of western Kenya, 
+the immediate former capital of Nyanza Province and the headquarters 
+of Kisumu County.
+It is the largest city in Nyanza region and second most important 
+city after Kampala in the greater Lake Victoria basin.
+The port was founded in 1901 as the main inland terminal 
+of the Uganda Railway and named Port Florence. 
+Although trade stagnated in the 1980s and 1990s, 
+it is again growing around oil exports.
+Kisumu literally means a place of barter 
+trade "sumo". The city has "Friendship" status with Cheltenham, 
+UK and "sister city" status with Roanoke, 
+Virginia and Boulder, Colorado, USA.\n</string>
+<string name="kisumu1">Attractions in the city include Kibuye Market, the Kisumu Museum, an 
+impala sanctuary, a bird sanctuary, 
+Hippo Point, and the nearby Kit Mikaye and Ndere Island National Park.
+Before the jet airline era, Kisumu was a landing point on the British flying boat passenger 
+and mail route from Southampton to Cape Town. Kisumu linked Port Bell and Nairobi.
+Kisumu is served by Kisumu Airport, with regular daily flights to Nairobi and elsewhere. 
+Plans to expand the airport in anticipation of increased trade brought about by the recreated
+ East African Community of Kenya, Tanzania and Uganda are already in high gear with works 
+expected to be complete soon.
+Lake Victoria ferries have operated from the port 
+linking the railway to Mwanza and Bukoba in Tanzania, and to Entebbe, 
+Port Bell, and Jinja in Uganda.\n</string>
+<string name="nakuru">Nakuru, the provincial capital of Kenya\'s Rift Valley province, 
+with roughly 300,000 inhabitants, and currently the fourth largest
+urban centre in the country, 
+lies about 1850 m above sea level.
+Nakuru is home to Lake Nakuru, one of the Rift Valley soda lakes, 
+which forms part of the Lake Nakuru National Park. 
+The park has large numbers of flamingoes that can be seen 
+foraging in the shallow lake. The park also has many wild 
+animals that can be seen during a safari. 
+Apart from the animals numerous other sites of interest are accessible from 
+Nakuru. These include Menengai Crater, a dormant volcano. 
+Small fumaroles and steam vents can regularly be observed within the forested 
+caldera from above. The second largest surviving volcanic crater in the world, 
+it plunges 483 m down from the rim and the summit is accessible by foot or
+vehicle 8 km from the main road to Nyahururu. 
+The wood-covered crater ground is a nature reserve.\n</string>
+<string name="nakuru1" >Although Lake Bogoria and Lake Baringo are in Baringo District, they are easily accessible from Nakuru.
+These are major tourist attraction sites too.
+The Rift Valley Sports Club lies in the centre of the town. 
+A number of sporting activities are hosted at this club and popular among them is cricket. 
+The local Indian community can be found at cricket fixtures throughout the year. 
+The town hosts an annual rugby festival dubbed "The Great Rift 10-a-side" which features teams from across the East Africa region.
+Hyrax Hill Prehistoric Site, discovered by the Leakeys in 1926, is considered a major Neolithic and Iron Age site. 
+The adjoining museum features finds from various nearby excavations.\n</string>
+<string name="nanyuki" >Nanyuki is  town in central-east Rift Valley region of Kenya lying 
+northwest of Mount Kenya along the A2 road and at the terminus of the branch 
+railway from Nairobi. It is situated just north of the Equator (0° 01\' North). 
+It was founded in 1907 by British settlers, some of whose descendants still live 
+in and around the town. Nanyuki is currently the main airbase of the Kenya Air Force. 
+The British Army also keeps a base at The Nanyuki Show Ground (NSG) from where it 
+conducts yearly desert and jungle training exercises on the mountain and in the arid 
+areas to the north. Nanyuki is the capital of Laikipia County. 
+In addition to a town hall, therefore, it also houses the county headquarters.\n</string>
+<string name="nanyuki1" >Climbers and backpackers visit Nanyuki on their way to or from Mount Kenya along
+ the Sirimon and Burguret routes and many other tourists pass through the town. 
+Nanyuki therefore has many hotels, of which Mount Kenya Safari Club and Sportsman\’s 
+Arms Hotel are the most prominent and best known. Other hotels include Lion’s Court, 
+Equatorial Hotel, Mount Kenya Paradise Hotel and Joskaki Hotel. 
+The oldest restaurant in town is The Marina and it is still fairly popular. 
+Several years ago, a restaurant was opened south of Nanyuki built inside a huge tree. 
+Named “Trout Tree Restaurant” its main attraction is obviously trout prepared in various ways. 
+Patrons can also visit the trout breeding installation at the foot of the tree. 
+Another notable restaurant is "Barneys" located at Nanyuki Civil Airfield, 
+once the base of the No. 1340 Flight RAF, which flew Harvards during the Mau Mau Uprising.\n
+A park lies in the centre of the town and two rivers, the Nanyuki and Liki Rivers, pass through it.
+The Equator passes through the southern part of Nanyuki. 
+One crosses it when approaching Nanyuki on the A2 from the south. 
+This spot is popular with tourists who have themselves photographed there. 
+Some people are usually at hand to show them the  effect of the Coriolis force, 
+which they say makes draining water swirl clockwise or anticlockwise depending on whether 
+one is on the northern or southern hemisphere.\n
+Nanyuki can be reached by air. Its airport lies 6.5 km (4 mi) south of the town and is served by 
+light aircraft along the highway to Nairobi . 
+There is a regular air service by Air Kenya, which is very convenient 
+for businessmen and tourists
+.The town is also reachable using the Tarmac road from Nairobi or The Railway. 
+Tourists can visit a number of parks and reserves in the vicinity of Nanyuki, 
+the most obvious one being Mount Kenya National Park. Others are Sweetwaters Game Reserve,
+ Lewa Wildlife Conservancy, Samburu National Reserve and Shaba National Reserve.
+Art exhibitions, plays and musicals are regularly held at the Lily Pond Arts Centre
+Nanyuki has some of the cleanest water in Kenya since the water supply source is a 
+river on Mt. Kenya.\n</string>
+<string name="history" > Detailed History of Kenya.</string>
+
+<string name="history1" >
+Ancient Kenya History dictates that early forms of man once roamed Kenya approximately 
+4 million years ago. These ancient life forms were probably some of the same life forms that 
+roamed Tanzania and other areas of East Africa.\n\n
+
+Activity builds up in Kenya\n\n
+
+At the wake of 2000 B.C, Cushitic people of Northern Africa moved into Kenya. 
+Two millenniums later, around 200 A.D, the Bantu made an entry into Kenya and settled along 
+Kenya\'s coast. They were later followed several hundred years later (10th-14th century) by 
+the Nilotic people, who occupied the Great Rift Valley plains.\n\n
+
+Did you know?\n\n
+
+Despite the Cushites\’ early arrival into Kenya, they are still a minority group today.
+Of the Arabs and the Portuguese
+These two groups arguably contribute to some of the most defining moments of Kenyan history. 
+It was a Game of Thrones, a battle for power, as these two groups were engaged in constant wrangles
+over leadership and power in the coast.\n\n
+
+Arabs\n\n
+
+Came in earlier than the Portuguese (as early as 700 A.D)
+Forged the Swahili culture and language. This was done through intermarriages with the Bantu 
+along the coast.Portuguese\n\n
+
+They came in at the outset of 1500 A.D and immediately took power from the Arabs.
+Built the illustrious Fort Jesus in 1593.
+The Portuguese were later stamped out of power by the Imam of Omam at the fall of the 1600s. 
+This reinstated Islamic control over the coast.\n\n</string>
+ <string name="history2" > Kenya Colonial History </string> 
+ <string name="history3" >
+The colonial history of Kenya starts with the Berlin Conference of 1885 when European nations divided Africa among themselves. 
+In 1894 the British government declared the East African Protectorate over Kenya and Uganda and in 1920 the protectorate 
+became a colony. The Kenya historical events timeline below highlights key events of the colonial period.\n\n
+
+1944 Kenyan African Union (KAU) formed to campaign for independence.\n
+1947 Jomo Kenyatta becomes KAU leader.\n 
+1947 The Mau Mau rebel movement is born.\n
+1952 Mau Mau activities intensify. The colonial government declares a state of emergency. Kenyatta, Achieng Aneko and others are arrested.\n
+1953 Kenyatta is sentenced to seven years imprisonment on charges of leading the Mau Mau.\n 
+1959 Kenyatta is released from prison.\n 
+1960 The state of emergency ends. Britain begins preparing Kenya for majority African rule. 
+James Gichuru Oginga Odinga and others form Kenya African National Union (KANU)\n
+1963 June 1: Kenya achieves internal self-government (Madaraka).\n 
+1963 December 12: Kenya gains independence. Jomo Kenyatta becomes Prime Minister.\n</string>
+<string name="food" > One delightful element about Kenyan food is its diverse flavor. 
+ Kenyan cooking draws upon a variety of ethnic traditions merged with the seasonings
+ and tastes of outside countries. Because of Kenya\'s long-standing relationship with 
+ foreign settlers and its colonization by the British, the taste, cooking methods and 
+ presentation of Kenyan foods have been greatly influenced by the Indians, Arabs, Europeans,
+ and Pakistanis as well as some western countries.\n\n
+ Kenyan food is mainly traditional and nearly all of Kenya\'s tribes boast a specific meal as 
+their very own staple food. Typical Kenyan cuisine is readily available in almost every Kenyan eatery; 
+you can find it served in restaurants, hotels, clubs and entertainment venues with an African flair.\n
+Ingredients in Kenyan Cuisine\n\n
+The most popular foods in Kenya are fresh foods from the country\'s vast resources. Farmland, lakes 
+and the Indian Ocean provide readily available vegetables, fruits and meats. Often, the ingredients 
+used to prepare a Kenyan dish are fresh, very cheap and easily used to make a quick meal. Common vegetables 
+include kale, spinach, cabbage, tomatoes, beans, potatoes, avocados and other leafy greens, while beef and 
+goat meat are the common meats served in a Kenyan meal. Fish, chicken, and mutton are available but are more expensive.\n\n
+Tropical fruits such as mangoes, oranges, pineapples, bananas, papaws, and pears are affordable, plentiful and 
+popular on Kenyan tables, their availability dictated by the season. Other ingredients used in typical Kenyan
+ dishes and recipes include rice, corn meal, and wheat and millet flour. Kenyans are avid tea drinkers, thus hot
+ beverages such as Kenyan tea and coffee are often served with meals. Cold beverages like soda, juice, and domestic 
+ and international beers are also available in restaurants, hotels, pubs and entertainment spots. \n\n
+ What About Other Foods?\n\n
+Adventurous meat eaters can also indulge in safe wildlife game meat, such as crocodile and ostrich, served in 
+specialized restaurants. Game meat is rarely eaten in Kenyan homes. While most ingredients are used for ethnic 
+food preparations, Western foods such as french fries, burgers, pizza, and pasta are readily available in some 
+restaurants and fast-food places. \n </string> 
+
+<string name="food1" >Common Ethnic Foods in Kenya\n </string>  
+<string name="food2" > 
+Ugali - a semi-hard cake made of maize (corn) flour or millet flour. It\'s a favorite meal for all Kenyans and 
+usually accompanies fish, meat, Roast Meat(nyama choma), meat stews, sukuma wiki or other greens.\n</string>    
+ <string name="food3" >Sukuma Wiki - a vegetable stew made of leafy green vegetables, mainly collards or kale. 
+Sukuma wiki is the foundation of many Kenyan meals. The word sukuma wiki is Swahili for to stretch the week,
+implying that sukuma wiki is a food used to stretch the meals to last for the entire week.\n</string>
+ <string name="food4" >Nyama Choma - The most popular dish in Kenya is this roasted beef or goat meat meal. It is mainly cooked over an
+open fire and served with ugali and kachumbari or mixed vegetables. </string>
+ <string name="food5" >Kachumbari - a fine mixture of chopped tomatoes, onions, pepper, cilantro, lemon juice and in some cases, avocado. 
+It is usually served with nyama choma and ugali. </string>
+<string name="food6" >Chapati - a round, flat unleavened bread cooked on a griddle to a soft brown color and served with meat stew and
+vegetables.</string>
+<string name="food7" >Ingoho - chicken cooked -Luhya style- by the Luhya tribe of Western Kenya. It is their signature meal, which 
+they serve to important visitors.</string>
+<string name="food8" >Pilau - rice cooked as rice pilaf, flavored with Indian spices. Pilau is a common dish served during Kenyan 
+parties, celebrations and festive seasons. </string>
+<string name="food9" >Wali - rice boiled in coconut milk. Along the Kenyan coast, wali is a popular meal of the Swahili and Mijikenda
+ tribes. Palm trees are grown all across Kenya\'s coastline and fresh coconut is always readily available.</string>
+<string name="food10" >Karanga - a meat and potato stew, usually served with ugali or rice.</string>
+<string name="food11" >Kienyeji / Irio - potatoes mashed with either beans/peas or maize and pumpkin leaves, then sautéed with onions
+ and served with either beef stew or vegetables. An alternative is mashing boiled maize and beans to make irio.</string>
+ <string name="food12" >Maandazi - deep fried pastries (similar to doughnuts) served for breakfast with tea or coffee.
+ They also serve well as a snack for late afternoon tea/coffee.</string>
+ <string name="food13" >Chai - tea boiled with milk and sugar. It\'s served hot and is the beverage of choice for most Kenyans.</string>
+ <string name="food14" >Samosa - a delicious deep-fried, square-shaped, meat-filled dough that is served as a snack or appetizer.</string>
+ <string name="food15" >Uji - porridge traditionally made from fermented millet, corn flour mix or a mixture of millet flour, 
+maize meal and powdered milk. Because of its high nutritional value, uji is a popular drink prepared 
+for infants, adolescents, nursing mothers and those who are sick.</string>
+    
+    
+    
+
+    
+
+
+</resources>

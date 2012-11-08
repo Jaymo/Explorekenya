@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg">
+    
+
+    <LinearLayout style="@style/TitleBar" >
+
+        <ImageView
+            style="@style/TitleBarLogo"
+            android:contentDescription="@string/description_logo"
+            android:onClick="onClickHome"
+            android:src="@drawable/title_home" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+
+        <TextView style="@style/TitleBarText" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+
+        <ImageButton 
+            android:id="@+id/map_btn"
+            style="@style/TitleBarAction"
+            android:contentDescription="@string/description_share"
+            android:src="@drawable/title_share"
+            android:onClick="onClickShare" />
+
+    </LinearLayout>
+    <ScrollView android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.61" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/description_logo"
+            android:src="@drawable/nairobi" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/imageView1"
+            android:text="@string/nairobi"
+            android:padding="10.0dip" 
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="14sp"
+            android:typeface="serif" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/textView1"
+            android:contentDescription="@string/description_logo"
+            android:src="@drawable/nairobi2" />
+        
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/imageView2"
+            android:text="@string/nairobi1"
+            android:padding="10.0dip" 
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="14sp"
+            android:typeface="serif" />
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/textView2"
+            android:contentDescription="@string/description_logo"
+            android:src="@drawable/nairobi1" />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/imageView3"
+            android:contentDescription="@string/description_logo"
+            android:src="@drawable/nairobi3" />
+        <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff29aad5"
+        android:layout_below="@+id/imageView4"
+        android:minHeight="45dip"
+        android:paddingTop="2dip"
+        android:paddingLeft="2dip"
+        android:paddingRight="2dip"
+        android:paddingBottom="4dip">
+        <Button
+                android:id="@+id/more_button"
+                style="@style/BottomActionbarButton"
+                android:drawableTop="@drawable/website"
+                android:text="@string/more" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:minWidth="100dip"/>
+        
+           
+        <Button
+            android:id="@+id/attractions_button"
+            style="@style/BottomActionbarButton"
+            android:drawableTop="@drawable/list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:minWidth="100dip"
+            android:text="@string/attractions" />
+        
+        <Button
+            android:id="@+id/map_comment"
+            style="@style/BottomActionbarButton"
+            android:drawableTop="@drawable/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:minWidth="100dip" 
+            android:text="@string/comment"/>
+        
+    </FrameLayout>
+       
+    </RelativeLayout>
+
+
+</LinearLayout>
+</ScrollView>
+</LinearLayout>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.JamuhuriTech.ExploreKenya"
+    android:versionCode="2"
+    android:versionName="1.3.3" android:installLocation="auto">
+    
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+  
+    <uses-sdk android:minSdkVersion="8" />
+
+    <application
+        android:icon="@drawable/icon_launcher"
+        android:label="@string/appname" android:debuggable="false" android:name="MyApplication">
+        <uses-library android:name="com.google.android.maps" />
+        <activity
+            android:name=".ExploreKenyaSplashScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name="ExploreKenyaService" />
+        
+        <receiver android:name="com.wipeout.ui.WipeOutBroadcastreceiver">
+              
+        <intent-filter>  
+        <action android:name="android.intent.action.BOOT_COMPLETED" />  
+        </intent-filter>  
+       
+        </receiver>
+        
+        <activity android:name=".ExploreKenyaHome" android:label="@string/app_name"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			
+        <activity android:name=".ExploreKenyaLocations" android:label="@string/app_name"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+        
+        <activity android:name=".Nairobi" android:label="@string/location_nairobi"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+         <activity android:name=".Mombasa" android:label="@string/location_mombasa"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+         <activity android:name=".Malindi" android:label="@string/location_malindi"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+         <activity android:name=".Kisumu" android:label="@string/location_kisumu"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+         <activity android:name=".Nakuru" android:label="@string/location_nakuru"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+         <activity android:name=".Nanyuki" android:label="@string/location_nanyuki"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".ExploreKenyaComment" android:label="@string/comments"
+			android:theme="@android:style/Theme.Dialog">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			
+			<activity android:name=".MapLocations" android:label="@string/map"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".MapLocationsMombasa" android:label="@string/map"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".MapLocationsMalindi" android:label="@string/map"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".MapLocationsKisumu" android:label="@string/map"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".MapLocationsNakuru" android:label="@string/map"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".MapLocationsNanyuki" android:label="@string/map"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			
+         <activity android:name=".ExploreKenyaTourism" android:label="@string/app_name"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+         <activity android:name=".ExploreKenyaCulture" android:label="@string/app_name"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".ExploreKenyaEvents" android:label="@string/app_name"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".TourismDisplay" android:label="@string/app_name"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+         <activity android:name=".LocationsDisplay" android:label="@string/app_name"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".Food" android:label="@string/description_food"
+			android:theme="@style/Theme.D1"
+			android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".Sports" android:label="@string/description_sports"
+			android:theme="@style/Theme.D1"
+			android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".Lifestyle" android:label="@string/description_lifestyle"
+			android:theme="@style/Theme.D1"
+			android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".History" android:label="@string/description_history"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".ExploreKenyaWebView" android:label="@string/app_name"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			
+         <activity android:name=".ExploreKenyaSettings" 
+            android:excludeFromRecents="true"
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.Dialog"> 
+		</activity>
+		<activity
+            android:name=".ExploreKenyaShare"
+            android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+    </application>
+    
+</manifest>

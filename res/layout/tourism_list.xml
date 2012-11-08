@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+	<!--  ListRow Left side Thumbnail image -->
+	<LinearLayout android:id="@+id/thumbnail" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"	
+        android:layout_alignParentLeft="true"      
+	    android:layout_marginRight="5dip">
+        
+
+		<ImageView
+		    android:id="@+id/list_image"
+		    android:layout_width="70dip"
+		    android:layout_height="70dip"
+		    android:src="@drawable/rihanna" />
+        
+	</LinearLayout>
+    
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textColor="#040404"
+        android:typeface="sans" 
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+
+	<!-- Category Name -->
+    <TextView
+        android:id="@+id/artist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:textColor="#040404"
+        android:textSize="20dip"
+        android:layout_marginTop="1dip"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Nairobi"/>
+        
+    <TextView
+        android:id="@+id/arti"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/artist"
+        android:textColor="#343434"
+        android:textSize="10dip"
+        android:layout_marginTop="3dip"
+        android:layout_toRightOf="@+id/thumbnail" />
+        
+
+	
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/title"
+        android:gravity="right"
+        android:text="Ref:543210"
+        android:layout_marginRight="5dip"
+        android:textSize="10dip"
+        android:textColor="#10bcc9"
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+      
+  
+    
+</RelativeLayout>

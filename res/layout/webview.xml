@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff">
+
+    <LinearLayout style="@style/TitleBar" >
+
+        <ImageView
+            style="@style/TitleBarLogo"
+            android:contentDescription="@string/description_logo"
+            android:onClick="onClickHome"
+            android:src="@drawable/title_home" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+
+        <TextView style="@style/TitleBarText" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+       <ImageButton 
+            android:id="@+id/map_btn"
+            style="@style/TitleBarAction"
+            android:contentDescription="@string/description_share"
+            android:src="@drawable/title_share"
+            android:onClick="onClickShare" />
+        
+
+    </LinearLayout>
+    
+    <WebView
+    android:id="@+id/webView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"/>
+
+   </LinearLayout>
