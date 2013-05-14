@@ -20,12 +20,12 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.JamuhuriTech.ExploreKenya.functions.JSONfunctions;
+import com.JamuhuriTech.ExploreKenya.functions.JSONfunctions.JSONCallback;
 import com.JamuhuriTech.ExploreKenya.util.LazyAdapter_Tourism;
 import com.JamuhuriTech.ExploreKenya.util.Util;
 
 public class ExploreKenyaCulture extends Activity {
 	
-	//public static String URL="http://10.0.2.2/android/api_fetch.php?q=";
 	public static String URL="http://akajaymo.kodingen.com/api_fetch.php?q=";
 	public static final String KEY_REF = "ref";
 	public static final String KEY_NAME = "name";
@@ -34,6 +34,7 @@ public class ExploreKenyaCulture extends Activity {
 	StringBuilder uriBuilder;
 	LazyAdapter_Tourism adapter;
 	ListView list;
+	JSONObject mjson;
     
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -43,11 +44,18 @@ public class ExploreKenyaCulture extends Activity {
         uriBuilder.append(table);
         
 		ArrayList<HashMap<String, String>> CategoryList = new ArrayList<HashMap<String, String>>();
-		
-        JSONObject json = JSONfunctions.getJSONfromURL(uriBuilder.toString());
+		JSONfunctions.getJSONfromURL(uriBuilder.toString(), new JSONCallback() {
+
+	        @Override
+	        public void onResult(JSONObject result) {
+	        	mjson =result;
+	        }
+	    });
+        
+        
         try{
         	
-        	JSONArray  hoteli = json.getJSONArray("PAYLOAD");
+        	JSONArray  hoteli = mjson.getJSONArray("PAYLOAD");
         	for(int i=0;i<hoteli.length();i++){						
 				HashMap<String, String> map = new HashMap<String, String>();	
 				JSONObject e = hoteli.getJSONObject(i);

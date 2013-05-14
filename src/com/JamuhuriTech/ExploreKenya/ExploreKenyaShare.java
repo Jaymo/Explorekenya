@@ -123,7 +123,7 @@ public class ExploreKenyaShare extends Activity implements OnClickListener, OAut
 			try {
 				response = mfacebook.request("me");
 				Bundle upDets = new Bundle();
-				upDets.putString("message", "Tour Kenya using ExploreKenya for Android.Available on Google Play http://tinyurl.com/a7qqzz4 and Samsung App Store");
+				upDets.putString("message", "Tour Kenya using ExploreKenya for Android.Available on Google Play and Samsung App Store");
 				upDets.putString(Facebook.TOKEN, access_token);
 				response = mfacebook.request("me/feed", upDets, "POST");
 				Toast.makeText(ExploreKenyaShare.this, "Susessfully Shared on your TimeLine.", Toast.LENGTH_LONG).show();
@@ -185,7 +185,7 @@ public class ExploreKenyaShare extends Activity implements OnClickListener, OAut
 	
 		try {
 			if (uam.verifyCredential()) {
-				TweetER.getInstance(uam).post(new Tweet("Tour Kenya using ExploreKenya for Android.Available on Google Play http://tinyurl.com/a7qqzz4 and Samsung App Store." ));
+				TweetER.getInstance(uam).post(new Tweet("Tour Kenya using ExploreKenya for Android.Available on Google Play and Samsung App Store." ));
 			
 				showMessage("Susessfully Shared on your TimeLine.");
 				

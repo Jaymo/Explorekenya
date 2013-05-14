@@ -1,69 +1,85 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/bg">
-    
-    
-    
-    <LinearLayout style="@style/TitleBar"
-                android:id="@+id/top">
-        <ImageView style="@style/TitleBarLogo"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/top"
+        style="@style/TitleBar" >
+
+        <ImageView
+            style="@style/TitleBarLogo"
             android:contentDescription="@string/description_logo"
-            android:src="@drawable/title_home"
-            android:onClick="onClickHome" />
-        
-        <TextView style="@style/TitleBarText"/>
+            android:onClick="onClickHome"
+            android:src="@drawable/title_home" />
+
+        <TextView style="@style/TitleBarText" />
+
         <ImageView style="@style/TitleBarSeparator" />
-        
-        <ImageButton 
+
+        <ImageButton
             android:id="@+id/srch_btn"
             style="@style/TitleBarAction"
             android:contentDescription="@string/description_search"
-            android:src="@drawable/title_search"
-            android:onClick="onClickSearch" />
-        <ImageButton 
+            android:onClick="onClickSearch"
+            android:src="@drawable/title_search" />
+
+        <ImageButton
             android:id="@+id/map_btn"
             style="@style/TitleBarAction"
             android:contentDescription=""
-            android:src="@drawable/title_map"
-            android:onClick="onClickMap" />
-   
-    </LinearLayout>	
-    <LinearLayout 
-	android:orientation="vertical" 
-	android:id="@+id/Search"  
-	android:visibility="gone" 
-	style="@style/TitleSearch">
-        <RelativeLayout 
-		android:id="@+id/relativelayout" 
-		android:layout_width="fill_parent" 
-		android:layout_height="wrap_content">
-	       <ImageButton 
-			android:id="@+id/logo" 
-			android:layout_width="wrap_content" 
-			android:layout_height="wrap_content" 
-			android:src="@drawable/kenya" 
-			android:layout_alignParentLeft="true"
-			android:onClick="onClicklogo"/>
-			
-            <AutoCompleteTextView 
-			android:id="@+id/query" 
-			android:layout_width="fill_parent" 
-			android:layout_height="wrap_content" 
-			android:layout_toLeftOf="@+id/find" 
-			android:layout_toRightOf="@+id/logo"
-			android:hapticFeedbackEnabled="true"
-			android:hint="Search term....." />
-            <ImageButton 
-			android:id="@+id/find" 
-			android:layout_width="wrap_content" 
-			android:layout_height="wrap_content" 
-			android:src="@drawable/btn_go" 
-			android:layout_alignParentRight="true" 
-			android:onClick="onClickfind"/>
-            </RelativeLayout>
-        </LinearLayout>
+            android:onClick="onClickMap"
+            android:src="@drawable/title_map" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Search"
+        style="@style/TitleSearch"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:onClick="onClicklogo"
+                android:src="@drawable/kenya" />
+
+            <AutoCompleteTextView
+                android:id="@+id/query"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/find"
+                android:layout_toRightOf="@+id/logo"
+                android:hapticFeedbackEnabled="true"
+                android:hint="Search term....." />
+
+            <ImageButton
+                android:id="@+id/find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="onClickfind"
+                android:src="@drawable/btn_go" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.google.ads.AdView
+        android:id="@+id/ad"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="a1518c88da38a63"
+        ads:loadAdOnCreate="true"
+        ads:testDevices="TEST_EMULATOR" />
 
     <ListView
         android:id="@+id/list_m"
@@ -72,7 +88,5 @@
         android:divider="#b5b5b5"
         android:dividerHeight="1dp"
         android:listSelector="@drawable/list_selector" />
-
-    
 
 </LinearLayout>

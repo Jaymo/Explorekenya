@@ -11,22 +11,20 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.JamuhuriTech.ExploreKenya.functions.JSONfunctions;
+import com.JamuhuriTech.ExploreKenya.functions.JSONfunctions.JSONCallback;
 import com.JamuhuriTech.ExploreKenya.util.LazyAdapter;
 
 public class ExploreKenyaLocations extends Activity {
 	
 	public static String URL="http://akajaymo.kodingen.com/api_fetch.php?q=";
-	//public static String URL="http://10.0.2.2/android/api_fetch.php?q=";
 	public static final String KEY_REF = "ref";
 	public static final String KEY_NAME = "name";
 	public static final String KEY_IMAGE_URL = "image_url";
@@ -34,6 +32,8 @@ public class ExploreKenyaLocations extends Activity {
 	StringBuilder uriBuilder;
 	ListView list;
 	LazyAdapter adapter;
+	JSONObject json;
+	 
     
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -44,8 +44,17 @@ public class ExploreKenyaLocations extends Activity {
         uriBuilder.append(table);
 		ArrayList<HashMap<String, String>> CategoryList = new ArrayList<HashMap<String, String>>();
 	      
-	       
-        JSONObject json = JSONfunctions.getJSONfromURL(uriBuilder.toString());
+		 Log.i("URL ", uriBuilder.toString());
+		 
+		 JSONfunctions.getJSONfromURL(uriBuilder.toString(), new JSONCallback() {
+
+		        @Override
+		        public void onResult(JSONObject result) {
+		        json =result;
+		        }
+		    });
+        
+         
         try{
         	
         	JSONArray  hoteli = json.getJSONArray("PAYLOAD");

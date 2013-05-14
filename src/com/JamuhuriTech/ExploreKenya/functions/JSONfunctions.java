@@ -13,18 +13,26 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.os.AsyncTask;
 import android.util.Log;
 
 public class JSONfunctions {
-
-	public static JSONObject getJSONfromURI(String url){
-		InputStream is = null;
-		String result = "";
-		JSONObject jArray = null;
-		
-		
-		
-		
+	    static InputStream is = null;
+		static String res = "";
+	    static JSONObject jArray = null;
+	    
+   public static interface JSONCallback {
+	        public void onResult(JSONObject result);
+	    }
+	    
+    public static void getJSONfromURL(final String url,final JSONCallback callback){
+    	
+    	 
+        new AsyncTask<String, Void, JSONObject>() {
+        	
+            @Override
+            protected JSONObject doInBackground(String... params) {
+                
 	    try{
 	            HttpClient httpclient = new DefaultHttpClient();
 	            HttpPost httppost = new HttpPost(url);
@@ -48,20 +56,28 @@ public class JSONfunctions {
 	                    sb.append(line + "\n");
 	            }
 	            is.close();
-	            result=sb.toString();
+	            res=sb.toString();
 	    }
 	    catch(Exception e){
 	            Log.e("log_tag", "Error converting result "+e.toString());
 	    }
-	    
+	    Log.i("Result BG ", res);
 	    try{
-	    	
-            jArray = new JSONObject(result);            
-	    }catch(JSONException e){
-	            Log.e("log_tag", "Error parsing data "+e.toString());
-	    }
-    
+        	
+            jArray = new JSONObject(res);            
+   	    }catch(JSONException e){
+   	            Log.e("log_tag", "Error parsing data "+e.toString());
+   	    }
+   	    callback.onResult(jArray);
+   	    
 	    return jArray;
-	}
+	   
+         }
+          @Override
+          public void onPostExecute(JSONObject jArray) {
+        	  Log.e("OnPost Execute", "............. ");	
+         }
+      }.execute(); 
+      
+     }
 }
-

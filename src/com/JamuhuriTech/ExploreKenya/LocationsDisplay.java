@@ -43,6 +43,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.JamuhuriTech.ExploreKenya.functions.JSONfunctions;
+import com.JamuhuriTech.ExploreKenya.functions.JSONfunctions.JSONCallback;
 import com.JamuhuriTech.ExploreKenya.util.ActionItem;
 import com.JamuhuriTech.ExploreKenya.util.LazyAdapter_tourism_display;
 import com.JamuhuriTech.ExploreKenya.util.QuickAction;
@@ -81,6 +82,7 @@ public class LocationsDisplay extends Activity {
     StringBuilder uriBuilder;
     static final String[] repo;
     ImageButton map;
+    JSONObject Mjson;
     static
 	{
 	String[] arrayOfString = new String[1]; 
@@ -119,11 +121,18 @@ public class LocationsDisplay extends Activity {
         
         ArrayList<HashMap<String, String>> resortslist = new ArrayList<HashMap<String, String>>(); 
         
-        JSONObject json = JSONfunctions.getJSONfromURL(uriBuilder.toString());
+        
+        JSONfunctions.getJSONfromURL(uriBuilder.toString(), new JSONCallback() {
+
+	        @Override
+	        public void onResult(JSONObject result) {
+	        	Mjson =result;
+	        }
+	    });
      
         try{
         	
-        	JSONArray  mot = json.getJSONArray("PAYLOAD");
+        	JSONArray  mot = Mjson.getJSONArray("PAYLOAD");
 	        for(int i=0;i<mot.length();i++){						
 	        	HashMap<String, String> map = new HashMap<String, String>();		
 				JSONObject e = mot.getJSONObject(i);

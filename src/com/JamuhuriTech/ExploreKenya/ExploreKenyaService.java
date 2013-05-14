@@ -18,7 +18,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.JamuhuriTech.ExploreKenya.functions.JSONfunctions;
+import com.JamuhuriTech.ExploreKenya.functions.JSONmetod;
 import com.JamuhuriTech.ExploreKenya.util.Util;
 import com.JamuhuriTech.ExploreKenya.util.pref;
 
@@ -83,7 +83,7 @@ private void startService() {
                   
                 public void run() {  
                 
-                	JSONObject json = JSONfunctions.getJSONfromURL(URL);
+                	JSONObject json = JSONmetod.getJSONfromURL(URL);
                 	try{
                     	JSONArray  updates = json.getJSONArray("UPDATES");
                     	for(int i=0;i<1;i++){

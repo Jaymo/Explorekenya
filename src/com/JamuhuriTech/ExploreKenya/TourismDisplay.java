@@ -43,6 +43,7 @@ import android.widget.Toast;
 
 import com.JamuhuriTech.ExploreKenya.LocationsDisplay.fetch;
 import com.JamuhuriTech.ExploreKenya.functions.JSONfunctions;
+import com.JamuhuriTech.ExploreKenya.functions.JSONfunctions.JSONCallback;
 import com.JamuhuriTech.ExploreKenya.util.ActionItem;
 import com.JamuhuriTech.ExploreKenya.util.LazyAdapter_tourism_display;
 import com.JamuhuriTech.ExploreKenya.util.QuickAction;
@@ -79,6 +80,7 @@ public class TourismDisplay extends Activity {
     StringBuilder uriBuilder;
     public static Typeface tf;
     static final String[] repo;
+    JSONObject mjson;
     static
 	{
 	String[] arrayOfString = new String[1]; 
@@ -112,12 +114,19 @@ public class TourismDisplay extends Activity {
         acTextView.setAdapter(adapter_coder);
         
         ArrayList<HashMap<String, String>> resortslist = new ArrayList<HashMap<String, String>>(); 
+        JSONfunctions.getJSONfromURL(uriBuilder.toString(), new JSONCallback() {
+
+	        @Override
+	        public void onResult(JSONObject result) {
+	        	mjson =result;
+	        }
+	    });
         
-        JSONObject json = JSONfunctions.getJSONfromURL(uriBuilder.toString());
+       
      
         try{
         	
-        	JSONArray  mot = json.getJSONArray("PAYLOAD");
+        	JSONArray  mot = mjson.getJSONArray("PAYLOAD");
 	        for(int i=0;i<mot.length();i++){						
 	        	HashMap<String, String> map = new HashMap<String, String>();		
 				JSONObject e = mot.getJSONObject(i);

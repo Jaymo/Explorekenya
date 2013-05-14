@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/bg">
-    
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
 
     <LinearLayout style="@style/TitleBar" >
 
@@ -19,335 +19,368 @@
         <TextView style="@style/TitleBarText" />
 
         <ImageView style="@style/TitleBarSeparator" />
-        <ImageButton 
+
+        <ImageButton
             android:id="@+id/srch_btn"
             style="@style/TitleBarAction"
             android:contentDescription="@string/description_share"
-            android:src="@drawable/title_share"
-            android:onClick="onClickShare" />
+            android:onClick="onClickShare"
+            android:src="@drawable/title_share" />
     </LinearLayout>
-    <ScrollView android:layout_width="fill_parent"
-		android:layout_height="fill_parent">
-    <LinearLayout
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
+
+            <com.google.ads.AdView
+                android:id="@+id/ad"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="a1518c88da38a63"
+                ads:loadAdOnCreate="true"
+                ads:testDevices="TEST_EMULATOR" />
+
             <RelativeLayout
-        android:id="@+id/relativeLayout1"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.61" >
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/nairobi" />
-         <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/imageView1"
-            android:text="@string/food"
-            android:paddingBottom="10.0dip"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/textView1"
-            android:text="@string/food1"
-            android:paddingBottom="10.0dip"
-            android:textColor="#040404"
-            android:textStyle="bold"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/textView2"
-            android:text="@string/food2"
-            android:paddingBottom="10.0dip"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/ugali" 
-            android:layout_below="@+id/textView3"/> 
-            
-            <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/imageView2"
-            android:text="@string/food3"
-            android:paddingBottom="10.0dip"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-           <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/sukumawiki" 
-            android:layout_below="@+id/textView4"/>
-           
-           <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/imageView5"
-            android:text="@string/food4"
-            android:paddingBottom="10.0dip"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-           <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/nyamachoma" 
-            android:layout_below="@+id/textView6"/>
-            
-           <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/imageView6"
-            android:text="@string/food5"
-            android:paddingBottom="10.0dip"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-           <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/kachumbari" 
-            android:layout_below="@+id/textView7"/>
-           <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/imageView8"
-            android:text="@string/food6"
-            android:paddingBottom="10.0dip"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-           <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/chapo" 
-            android:layout_below="@+id/textView9"/>
-           <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/imageView10"
-            android:text="@string/food7"
-            android:paddingBottom="10.0dip"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-           <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/ingoho" 
-            android:layout_below="@+id/textView10"/>
-           
-           <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/imageView11"
-            android:text="@string/food8"
-            android:paddingBottom="10.0dip"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-           <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/pilau" 
-            android:layout_below="@+id/textView11"/>
-           
-           
-           <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/imageView12"
-            android:text="@string/food9"
-            android:paddingBottom="10.0dip"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-           <ImageView
-            android:id="@+id/imageView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/wali" 
-            android:layout_below="@+id/textView12"/>
-           
-           <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/imageView13"
-            android:text="@string/food10"
-            android:paddingBottom="10.0dip"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-           <ImageView
-            android:id="@+id/imageView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/karanga" 
-            android:layout_below="@+id/textView13"/>
-           
-           <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/imageView14"
-            android:text="@string/food11"
-            android:paddingBottom="10.0dip"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-           <ImageView
-            android:id="@+id/imageView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/irio" 
-            android:layout_below="@+id/textView14"/>
-           
-           <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/imageView15"
-            android:text="@string/food12"
-            android:paddingBottom="10.0dip"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-           <ImageView
-            android:id="@+id/imageView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/mandazi" 
-            android:layout_below="@+id/textView15"/>
-           
-           <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/imageView16"
-            android:text="@string/food13"
-            android:paddingBottom="10.0dip"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-           <ImageView
-            android:id="@+id/imageView17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/tea" 
-            android:layout_below="@+id/textView16"/>
-           
-           <TextView
-            android:id="@+id/textView17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/imageView17"
-            android:text="@string/food14"
-            android:paddingBottom="10.0dip"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-           <ImageView
-            android:id="@+id/imageView18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/amosa" 
-            android:layout_below="@+id/textView17"/>
-           
-           <TextView
-            android:id="@+id/textView18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/imageView18"
-            android:text="@string/food15"
-            android:paddingBottom="10.0dip"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-           <ImageView
-            android:id="@+id/imageView19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/uji" 
-            android:layout_below="@+id/textView18"/>
-        
- </RelativeLayout>       
- </LinearLayout>
-</ScrollView>
+                android:id="@+id/relativeLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.61" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/nairobi" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView1"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/food"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView1"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/food1"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="#040404"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView2"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/food2"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView3"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/ugali" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView2"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/food3"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView4"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/sukumawiki" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView5"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/food4"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView6"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/nyamachoma" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView6"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/food5"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView7"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/kachumbari" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView8"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/food6"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView9"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/chapo" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView10"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/food7"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView10"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/ingoho" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView11"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/food8"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView11"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/pilau" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView12"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/food9"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView12"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/wali" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView13"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/food10"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView13"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/karanga" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView14"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/food11"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView14"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/irio" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView15"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/food12"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView15"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/mandazi" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView16"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/food13"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <ImageView
+                    android:id="@+id/imageView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView16"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/tea" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView17"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/food14"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <ImageView
+                    android:id="@+id/imageView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView17"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/amosa" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView18"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/food15"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <ImageView
+                    android:id="@+id/imageView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView18"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/uji" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

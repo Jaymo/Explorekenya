@@ -27,6 +27,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.JamuhuriTech.ExploreKenya.functions.JSONfunctions;
+import com.JamuhuriTech.ExploreKenya.functions.JSONfunctions.JSONCallback;
 import com.JamuhuriTech.ExploreKenya.util.ActionItem;
 import com.JamuhuriTech.ExploreKenya.util.LazyAdapter_Events;
 import com.JamuhuriTech.ExploreKenya.util.QuickAction;
@@ -50,9 +51,7 @@ public class ExploreKenyaEvents extends Activity{
 	public static final String KEY_IMAGE_URL = "image_url";
 	public static String table="tbl_events";
 	
-    //public static String URL="http://10.0.2.2/android/api_fetch.php?q=";
     public static String URL="http://akajaymo.kodingen.com/api_fetch.php?q=";
-    //public static String LINK="http://10.0.2.2/android/api_update.php";
     public static String LINK="http://akajaymo.kodingen.com/api_update.php";
     private Intent i;
 	ListView list;
@@ -63,6 +62,7 @@ public class ExploreKenyaEvents extends Activity{
     ActionItem website,telephone,emailmessage,drive;
     ActionItem actionItem ;
     StringBuilder uriBuilder;
+    JSONObject json,json_updt;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,9 +77,13 @@ public class ExploreKenyaEvents extends Activity{
         drive	= new ActionItem(DRIVE, "Drive", getResources().getDrawable(R.drawable.drive));
 
         ArrayList<HashMap<String, String>> eventslist = new ArrayList<HashMap<String, String>>(); 
-        JSONObject json = JSONfunctions.getJSONfromURL(uriBuilder.toString());
-     
-        
+        JSONfunctions.getJSONfromURL(uriBuilder.toString(), new JSONCallback() {
+
+	        @Override
+	        public void onResult(JSONObject result) {
+	        json =result;
+	        }
+	    });
         try{
         	
         	JSONArray  mot = json.getJSONArray("PAYLOAD");
@@ -162,7 +166,14 @@ public class ExploreKenyaEvents extends Activity{
                 mp.start();
         	}
 		});
-        JSONObject json_updt = JSONfunctions.getJSONfromURL(LINK);
+        
+        JSONfunctions.getJSONfromURL(LINK, new JSONCallback() {
+
+	        @Override
+	        public void onResult(JSONObject result) {
+	        	json_updt =result;
+	        }
+	    });
     	try{
         	JSONArray  updates = json_updt.getJSONArray("UPDATES");
         	for(int i=0;i<1;i++){

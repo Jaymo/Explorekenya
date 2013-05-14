@@ -20,6 +20,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.JamuhuriTech.ExploreKenya.functions.JSONfunctions;
+import com.JamuhuriTech.ExploreKenya.functions.JSONfunctions.JSONCallback;
 import com.JamuhuriTech.ExploreKenya.util.LazyAdapter_Tourism;
 import com.JamuhuriTech.ExploreKenya.util.Util;
 
@@ -34,6 +35,7 @@ public class ExploreKenyaTourism extends Activity {
 	ListView list;
 	StringBuilder uriBuilder;
 	LazyAdapter_Tourism adapter;
+	JSONObject json;
     
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -44,9 +46,16 @@ public class ExploreKenyaTourism extends Activity {
         uriBuilder.append(table);
         
 		ArrayList<HashMap<String, String>> CategoryList = new ArrayList<HashMap<String, String>>();
-	      
-	       
-        JSONObject json = JSONfunctions.getJSONfromURL(uriBuilder.toString());
+		JSONfunctions.getJSONfromURL(uriBuilder.toString(), new JSONCallback() {
+
+	        @Override
+	        public void onResult(JSONObject result) {
+	        	json =result;
+	        }
+	    });
+
+         
+		
         try{
         	
         	JSONArray  hoteli = json.getJSONArray("PAYLOAD");

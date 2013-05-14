@@ -25,6 +25,7 @@ import android.widget.Toast;
 import com.JamuhuriTech.ExploreKenya.functions.CustomItemizedOverlay;
 import com.JamuhuriTech.ExploreKenya.functions.CustomOverlayItem;
 import com.JamuhuriTech.ExploreKenya.functions.JSONfunctions;
+import com.JamuhuriTech.ExploreKenya.functions.JSONfunctions.JSONCallback;
 import com.JamuhuriTech.ExploreKenya.util.Util;
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapView;
@@ -43,7 +44,7 @@ public class MapLocationsNakuru extends UserLocationMap {
 	StringBuilder uriBuilder;
 	public static String parameter;
 	String tbl_nairobi,tbl_mombasa,tbl_malindi,tbl_kisumu,tbl_nakuru,tbl_nanyuki;
-	
+	JSONObject mjson;
 	public static Typeface tf;
 
 	
@@ -80,11 +81,17 @@ public class MapLocationsNakuru extends UserLocationMap {
 		 
 		 private void initializeMap() {
 			 
-			 JSONObject json = JSONfunctions.getJSONfromURL(uriBuilder.toString()); 
+			 JSONfunctions.getJSONfromURL(uriBuilder.toString(), new JSONCallback() {
+
+			        @Override
+			        public void onResult(JSONObject result) {
+			        	mjson =result;
+			        }
+			    }); 
 		   
 			 try{
 				 List<Overlay> mapOverlays = mapView.getOverlays();
-		     	 JSONArray  places = json.getJSONArray("PAYLOAD");
+		     	 JSONArray  places = mjson.getJSONArray("PAYLOAD");
 		     	
 			        for(int i=0;i<places.length();i++){							
 						JSONObject e =  places.getJSONObject(i);

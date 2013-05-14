@@ -7,7 +7,7 @@
 	android:paddingLeft="10dip" 
 	android:minWidth="200dip" 
 	android:id="@+id/balloon_main_layout"
-	android:background="@drawable/balloon_overlay_bg_selector"
+	android:background="@drawable/balloon_overlay_focused"
 	android:paddingTop="0dip"
 	android:paddingRight="0dip">
 

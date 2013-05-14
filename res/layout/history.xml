@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/bg">
-    
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
 
     <LinearLayout style="@style/TitleBar" >
 
@@ -19,95 +19,108 @@
         <TextView style="@style/TitleBarText" />
 
         <ImageView style="@style/TitleBarSeparator" />
-        <ImageButton 
+
+        <ImageButton
             android:id="@+id/srch_btn"
             style="@style/TitleBarAction"
             android:contentDescription="@string/description_share"
-            android:src="@drawable/title_share"
-            android:onClick="onClickShare" />
+            android:onClick="onClickShare"
+            android:src="@drawable/title_share" />
     </LinearLayout>
-    <ScrollView android:layout_width="fill_parent"
-		android:layout_height="fill_parent">
-    <LinearLayout
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
-         <RelativeLayout
-        android:id="@+id/relativeLayout1"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.61" >
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/jomo" />
+            <com.google.ads.AdView
+                android:id="@+id/ad"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="a1518c88da38a63"
+                ads:loadAdOnCreate="true"
+                ads:testDevices="TEST_EMULATOR" />
 
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.61" >
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/imageView1"
-            android:text="@string/history"
-            android:textStyle="bold"
-            android:paddingBottom="10.0dip"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/textView1"
-            android:text="@string/history1"
-            android:padding="10.0dip" 
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/textView2"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/norfolk" />
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/imageView2"
-            android:text="@string/history2"
-            android:textColor="#040404"
-            android:textStyle="bold"
-            android:paddingBottom="10.0dip"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/textView3"
-            android:text="@string/history3"
-            android:padding="10.0dip" 
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
-            android:typeface="serif" />
-        
-        
-        </RelativeLayout>
-            
-        
-        
- </LinearLayout>
-</ScrollView>
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/jomo" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView1"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/history"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/textView1"
+                    android:padding="10.0dip"
+                    android:text="@string/history1"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView2"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/norfolk" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView2"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10.0dip"
+                    android:text="@string/history2"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="#040404"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/textView3"
+                    android:padding="10.0dip"
+                    android:text="@string/history3"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
